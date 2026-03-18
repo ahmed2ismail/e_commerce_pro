@@ -1,5 +1,6 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:e_commerce_pro/core/utils/app_colors.dart';
+import 'package:e_commerce_pro/core/utils/app_router.dart';
 import 'package:e_commerce_pro/feature/auth/presentation/views/sign_up_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,8 @@ class EcommercePro extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
+        return MaterialApp.router(
+          routerConfig: AppRouter.router,
           debugShowCheckedModeBanner: false,
           locale: DevicePreview.locale(context),
           builder: DevicePreview.appBuilder,
@@ -34,7 +36,6 @@ class EcommercePro extends StatelessWidget {
             primaryColor: AppColors.primaryRed,
             fontFamily: 'Metropolis', // نوع الخط المستخدم في التصميم (هنضيفه لاحقاً)
           ),
-          home: child,
         );
       },
       // شاشة البداية (هتكون الـ Login حالياً لحد ما نعمل الـ Splash)

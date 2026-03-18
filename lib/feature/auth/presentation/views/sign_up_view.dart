@@ -1,6 +1,10 @@
-import 'package:e_commerce_pro/feature/auth/presentation/views/login_view.dart';
+import 'package:e_commerce_pro/core/utils/app_assets.dart';
+import 'package:e_commerce_pro/core/utils/app_router.dart';
+import 'package:e_commerce_pro/feature/auth/presentation/views/widgets/social_icon_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -43,12 +47,7 @@ class SignUpView extends StatelessWidget {
                 // سطر "Already have an account?"
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LoginView(),
-                      ),
-                    );
+                    GoRouter.of(context).push(AppRouter.kLoginView);
                   },
                   child: Row(
                     mainAxisAlignment:
@@ -61,17 +60,16 @@ class SignUpView extends StatelessWidget {
                           color: AppColors.black,
                         ),
                       ),
-                      Icon(
-                        Icons.arrow_forward,
-                        color: AppColors.primaryRed,
-                        size: 20.sp,
+                      SvgPicture.asset(
+                        AppAssets.arrowRed, // المسار اللي عرفناه في الـ Assets
+                        height: 24.h,
+                        width: 24.w,
+                        fit: BoxFit.contain,
                       ),
                     ],
                   ),
                 ),
-
                 SizedBox(height: 28.h),
-
                 // الزرار الأحمر الكبير
                 CustomButton(
                   text: 'SIGN UP',
@@ -79,9 +77,7 @@ class SignUpView extends StatelessWidget {
                     // هنا هنربط الـ Logic بتاع الـ Bloc مستقبلاً
                   },
                 ),
-
                 SizedBox(height: 120.h), // مسافة قبل الجزء السفلي
-
                 Center(
                   child: Text(
                     'Or sign up with social account',
@@ -89,18 +85,12 @@ class SignUpView extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 12.h),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Icon(Icons.g_mobiledata),
-                    ),
-                    SizedBox(width: 30),
-                    CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Icon(Icons.facebook),
-                    ),
+                    socialIconContainer(AppAssets.googleIcon),
+                    SizedBox(width: 16.w),
+                    socialIconContainer(AppAssets.facebookIcon),
                   ],
                 ),
               ],

@@ -37,7 +37,10 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.5
   flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.2.4 # لقراءة ملفات الـ SVG اللي هنحملها من فيجما.
+  font_awesome_flutter: ^11.0.0 # للأيقونات الجاهزة لو احتجناها.
   get_it: ^7.6.7
+  go_router: ^17.1.0
   google_fonts: ^6.2.1
   isar: ^3.1.0+1
   isar_flutter_libs: ^3.1.0+1
