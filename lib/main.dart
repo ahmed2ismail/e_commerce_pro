@@ -1,5 +1,6 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:e_commerce_pro/core/utils/app_colors.dart';
+import 'package:e_commerce_pro/feature/auth/presentation/views/sign_up_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -37,7 +38,7 @@ class EcommercePro extends StatelessWidget {
         );
       },
       // شاشة البداية (هتكون الـ Login حالياً لحد ما نعمل الـ Splash)
-      child: const Scaffold(body: Center(child: Text("Welcome Ahmed!"))),
+      child: const SignUpView(),
     );
   }
 }
