@@ -1,7 +1,6 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:e_commerce_pro/core/utils/app_colors.dart';
 import 'package:e_commerce_pro/core/utils/app_router.dart';
-import 'package:e_commerce_pro/feature/auth/presentation/views/sign_up_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,8 +8,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 void main() {
   runApp(
     DevicePreview(
-      enabled: !kReleaseMode, // هيشتغل بس وأنت بتجرب، ومش هيظهر في النسخة النهائية
-      builder: (context) => EcommercePro(), 
+      enabled:
+          !kReleaseMode, // هيشتغل بس وأنت بتجرب، ومش هيظهر في النسخة النهائية
+      builder: (context) => EcommercePro(),
     ),
   );
 }
@@ -22,7 +22,10 @@ class EcommercePro extends StatelessWidget {
   Widget build(BuildContext context) {
     // ScreenUtilInit: بياخد حجم الشاشة اللي المصمم اشتغل عليها في فيجما
     return ScreenUtilInit(
-      designSize: const Size(375, 812), // الأبعاد القياسية لأغلب تصاميم الموبايل في فيجما
+      designSize: const Size(
+        375,
+        812,
+      ), // الأبعاد القياسية لأغلب تصاميم الموبايل في فيجما
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
@@ -34,12 +37,11 @@ class EcommercePro extends StatelessWidget {
           theme: ThemeData(
             scaffoldBackgroundColor: AppColors.background,
             primaryColor: AppColors.primaryRed,
-            fontFamily: 'Metropolis', // نوع الخط المستخدم في التصميم (هنضيفه لاحقاً)
+            fontFamily:
+                'Metropolis', // نوع الخط المستخدم في التصميم (هنضيفه لاحقاً)
           ),
         );
       },
-      // شاشة البداية (هتكون الـ Login حالياً لحد ما نعمل الـ Splash)
-      child: const SignUpView(),
     );
   }
 }
