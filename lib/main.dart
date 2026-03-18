@@ -1,11 +1,13 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:e_commerce_pro/core/utils/app_colors.dart';
 import 'package:e_commerce_pro/core/utils/app_router.dart';
+import 'package:e_commerce_pro/core/utils/service_locator.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(
     DevicePreview(
       enabled:
