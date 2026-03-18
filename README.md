@@ -1,17 +1,26 @@
-# e_commerce_pro
+# 🛒 E-Commerce Pro App
 
-A new Flutter project.
+A feature-rich, high-performance E-commerce application built with **Flutter** following **Clean Architecture** principles.
 
-## Getting Started
+## 🚀 Project Overview
+This project is designed to demonstrate professional Flutter development practices, focusing on scalability, maintainability, and a seamless user experience.
 
-This project is a starting point for a Flutter application.
+## 🏗️ Architecture & Tech Stack
+- **Architecture**: Clean Architecture (Data, Domain, Presentation layers).
+- **State Management**: Flutter Bloc (Cubit).
+- **Dependency Injection**: GetIt.
+- **Local Storage**: Isar Database (Next-gen NoSQL).
+- **Networking**: Dio with professional error handling.
+- **UI & Responsiveness**: flutter_screenutil for pixel-perfect designs.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Folder Structure
+- `lib/core`: Shared utilities, themes, and global widgets.
+- `lib/features`: Feature-based modules (Auth, Home, Cart, etc.).
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 📸 Screenshots
+*(Coming Soon - Visuals from Figma design)*
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚦 Getting Started
+1. Clone the repository: `git clone https://github.com/ahmed2ismail/e_commerce_pro.git`
+2. Install dependencies: `flutter pub get`
+3. Run the app: `flutter run`
